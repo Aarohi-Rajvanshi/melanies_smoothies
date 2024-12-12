@@ -21,7 +21,7 @@ st.write('The name on your Smoothie will be:', name_on_order)
 #st.dataframe(data=my_dataframe, use_container_width = True)
 #st.stop()
 pd_df=my_dataframe.to_pandas()
-
+st.dataframe(pd_df)
 
 ingredients_list = st.multiselect(
     'Choose upto 5 ingredients:'
@@ -45,8 +45,8 @@ if ingredients_list:
         values ('""" + ingredients_string + """')"""
     time_to_insert = st.button('Submit Order')
     #pd_df=my_dataframe.to_pandas()
-    st.dataframe(pd_df)
-    #st.stop()
+    #st.dataframe(pd_df)
+    st.stop()
 
 if my_dataframe:
     editable_df = st.data_editor(my_dataframe)
@@ -65,7 +65,7 @@ if my_dataframe:
             st.write('Something went wrong.')
 else:
     st.success('There are no pending orders right now',icon="✅")
-st.stop()
+
 
 
 
