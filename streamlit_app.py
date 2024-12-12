@@ -46,7 +46,7 @@ if ingredients_list:
     time_to_insert = st.button('Submit Order')
     #pd_df=my_dataframe.to_pandas()
     st.dataframe(pd_df)
-    st.stop()
+    #st.stop()
 
 if my_dataframe:
     editable_df = st.data_editor(my_dataframe)
@@ -65,6 +65,7 @@ if my_dataframe:
             st.write('Something went wrong.')
 else:
     st.success('There are no pending orders right now',icon="✅")
+st.stop()
 
 
 
